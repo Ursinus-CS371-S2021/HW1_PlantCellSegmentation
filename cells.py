@@ -129,6 +129,7 @@ if __name__ == '__main__':
     plt.savefig("labels.png", bbox_inches='tight')
     cells_original = plt.imread("Cells.jpg")
     X = get_cluster_centers(labels)
+    X = np.array(X)
     plt.imshow(cells_original)
     plt.scatter(X[:, 1], X[:, 0], c='C2')
     plt.savefig("cells_marked.png")
